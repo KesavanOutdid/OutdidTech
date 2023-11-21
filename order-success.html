@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fastkart">
+    <meta name="keywords" content="Fastkart">
+    <meta name="author" content="Fastkart">
+    <link rel="icon" href="assets/images/icon/icon1.png" type="image/x-icon">
+    <title>Order Success</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- feather icon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick-theme.css">
+
+    <!-- Iconly css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bulk-style.css">
+
+    <!-- Template css -->
+    <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Loader Start -->
+    <div class="fullpage-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Loader End -->
+
+     <!-- Header Start -->
+     <header class="pb-md-4 pb-0">
+
+        <div class="top-nav top-header sticky-header">
+            <div class="container-fluid-lg">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbar-top">
+                            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                                <span class="navbar-toggler-icon">
+                                    <i class="fa-solid fa-bars"></i>
+                                </span>
+                            </button>
+                            <a href="index.html" class="web-logo nav-logo">
+                                <img src="assets/images/icon/icon.png" class="img-fluid blur-up lazyload" alt="" style="width:70%;">
+                            </a>
+
+                            <div class="middle-box">
+
+                                <div class="search-box">
+                                    <div class="input-group">
+                                        <input type="text" id="myText" name="srchValue" value="" class="form-control" placeholder="I'm searching for..."
+                                            aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                        <button onclick="myFunction()" class="srchClick btn" type="button" id="button-addon2">
+                                            <i data-feather="search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightside-box">
+                                <div class="search-full">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i data-feather="search" class="font-light"></i>
+                                        </span>
+                                        <input type="text" id="srchFld" class="form-control search-type" placeholder="Search here..">
+                                        <span class="input-group-text close-search">
+                                            <i data-feather="x" class="font-light"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="right-side-menu">
+                                    <li class="right-side">
+                                        <div class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <div class="search-box">
+                                                    <i data-feather="search"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="right-side">
+                                        <a href="contact-us.html" class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <i data-feather="phone-call" style="color:#0da487;"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="right-side">
+                                        <div class="onhover-dropdown header-badge">
+                                            <a href="cart.html">
+                                                <button type="button" class="btn p-0 position-relative header-wishlist">
+                                                    <i data-feather="shopping-cart" style="color:#0da487;"></i>
+                                                    <span class="total-count position-absolute top-0 start-100 translate-middle badge">
+                                                    </span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="right-side onhover-dropdown">
+                                        <div class="delivery-login-box">
+                                            <!-- User Email -->
+                                            <div class="onhover-dropdown header-badge">
+                                                <h5 id="useremail" style="color: #0da487;"></h5>
+                                            </div>
+                                            <div class="delivery-icon">
+                                                <i data-feather="user" style="color:#0da487;"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="onhover-div onhover-div-login">
+                                            <ul class="user-box-name">
+                                                <li class="product-box-contain" id="hideShowID">
+                                                    <a href="login.html">Log In</a>
+                                                </li>
+
+                                                <li class="product-box-contain" id="myAccount">
+                                                    <a href="user-dashboard.html">My Account</a>
+                                                </li>
+
+                                                <li class="product-box-contain" id="myOrders">
+                                                    <a href="orders.html">My Orders</a>
+                                                </li>
+
+                                                <li class="product-box-contain">
+                                                    <a href="forgot.html">Forgot Password</a>
+                                                </li>
+
+                                                <li class="product-box-contain">
+                                                    <a onclick="deleteItems()">Log Out</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-nav">
+                        <div class="header-nav-middle">
+                            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                                    <div class="offcanvas-header navbar-shadow">
+                                        <h5>Menu</h5>
+                                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="index.html">Home</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Product</a>
+                                                <ul class="dropdown-menu" id="get-categorys">
+                                                    <!-- dropdown data -->
+                                                </ul>
+                                            </li>
+
+                                            <!-- <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Payment</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown dropdown-mega">
+                                                <a class="nav-link dropdown-toggle ps-xl-2 ps-0" href="javascript:void(0)" data-bs-toggle="dropdown">Shipping</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Wiki</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Seller</a>
+
+                                            </li>
+
+                                            <li class="nav-item dropdown new-nav-item">
+                                                <label class="new-dropdown">New</label>
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Smt</a>
+
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+     <!-- mobile fix menu start -->
+     <div class="mobile-menu d-md-none d-block mobile-cart" style="background-image: url('assets/images/background/banner_08.png'); background-size: cover;">
+        <ul>
+            <li class="active">
+                <a href="index.html">
+                    <i class="iconly-Home icli"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="search.html" class="search-box">
+                    <i class="iconly-Search icli"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    <i class="iconly-Bag-2 icli fly-cate"></i>
+                    <span>Cart</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- mobile fix menu end -->
+
+    <!-- Breadcrumb Section Start -->
+     <section class="breadscrumb-section pt-0" >
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadscrumb-contain breadscrumb-order">
+                        <div class="order-box">
+                            <div class="order-image">
+                                <div class="checkmark">
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="star" height="19" viewBox="0 0 19 19" width="19"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.296.747c.532-.972 1.393-.973 1.925 0l2.665 4.872 4.876 2.66c.974.532.975 1.393 0 1.926l-4.875 2.666-2.664 4.876c-.53.972-1.39.973-1.924 0l-2.664-4.876L.76 10.206c-.972-.532-.973-1.393 0-1.925l4.872-2.66L8.296.746z">
+                                        </path>
+                                    </svg>
+                                    <svg class="checkmark__check" height="36" viewBox="0 0 48 36" width="48"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M47.248 3.9L43.906.667a2.428 2.428 0 0 0-3.344 0l-23.63 23.09-9.554-9.338a2.432 2.432 0 0 0-3.345 0L.692 17.654a2.236 2.236 0 0 0 .002 3.233l14.567 14.175c.926.894 2.42.894 3.342.01L47.248 7.128c.922-.89.922-2.34 0-3.23">
+                                        </path>
+                                    </svg>
+                                    <svg class="checkmark__background" height="115" viewBox="0 0 120 115" width="120"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M107.332 72.938c-1.798 5.557 4.564 15.334 1.21 19.96-3.387 4.674-14.646 1.605-19.298 5.003-4.61 3.368-5.163 15.074-10.695 16.878-5.344 1.743-12.628-7.35-18.545-7.35-5.922 0-13.206 9.088-18.543 7.345-5.538-1.804-6.09-13.515-10.696-16.877-4.657-3.398-15.91-.334-19.297-5.002-3.356-4.627 3.006-14.404 1.208-19.962C10.93 67.576 0 63.442 0 57.5c0-5.943 10.93-10.076 12.668-15.438 1.798-5.557-4.564-15.334-1.21-19.96 3.387-4.674 14.646-1.605 19.298-5.003C35.366 13.73 35.92 2.025 41.45.22c5.344-1.743 12.628 7.35 18.545 7.35 5.922 0 13.206-9.088 18.543-7.345 5.538 1.804 6.09 13.515 10.696 16.877 4.657 3.398 15.91.334 19.297 5.002 3.356 4.627-3.006 14.404-1.208 19.962C109.07 47.424 120 51.562 120 57.5c0 5.943-10.93 10.076-12.668 15.438z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="order-contain">
+                                <h3 class="theme-color">Order Success</h3>
+                                <h5 class="text-content">Payment Is Successfully And Your Order Is On The Way</h5>
+                                <!-- <h6>Transaction ID: 1708031724431131</h6> -->
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- Breadcrumb Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="section-t-space" style="background: linear-gradient(to left, #2c3e50, #bdc3c7);">
+        <!-- <footer class="section-t-space" style="background-image: url('assets/images/background/footer.jpg');color: white;"> -->
+            <div class="container-fluid-lg">
+                <div class="main-footer section-b-space section-t-space">
+                    <div class="row g-md-4 g-3">
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-logo">
+    
+                                <div class="footer-logo-contain">
+                                    <div class="footer-title">
+                                        <h4 style="color: white;">Contact Details</h4>
+                                    </div>
+                                    <p style="padding-top:15px;color: white;">For registration questions please get in touch using the
+                                        contact details below. For any questions use the form.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer-title" style="padding-top: 20px;">
+                                <h4 style="color: white;">Address</h4>
+                            </div>
+    
+                            <div class="footer-contain">
+                                <ul>
+                                    <li>
+                                        <a href="" class="text-content" style="color: white;">No.57, 17th Cross, 7th Main road, BTM 2nd Stage,
+                                            Bangalore-560076</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-xl-3 col-sm-3">
+                            <div class="footer-title" style="padding-top:20px;">
+                                <h4 style="color: white;">Help Center</h4>
+                            </div>
+    
+                            <div class="footer-contain">
+                                <ul>
+                                    <li>
+                                        <a href="user-dashboard.html" class="text-content" style="color: white;">My Account</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-title" style="padding-top: 20px;">
+                                <h4 style="color: white;">Contact Us</h4>
+                            </div>
+    
+                            <div class="footer-contact">
+                                <ul>
+                                    <li>
+                                        <div class="footer-number">
+                                            <i data-feather="phone" style="stroke:white"></i>
+                                            <div class="contact-number">
+                                                <h6 class="text-content"  style="color: white;">Hotline 24/7 :</h6>
+                                                <h5  style="color: white;">+91 80959 45298</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="footer-number">
+                                            <i data-feather="mail" style="stroke:white"></i>
+                                            <div class="contact-number">
+                                                <h6 class="text-content" style="color: white;">Email Address :</h6>
+                                                <h5 style="color: white;">sam@outdidunified.com</h5>
+                                                <h5 style="color: white;">info@outdidunified.com</h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="sub-footer section-small-space">
+                    <div class="reserve">
+                        <h6 class="text-content" style="color: white;">©2023 Outdid Electronics</h6>
+                    </div>
+    
+                    <div class="social-link">
+                        <h6 class="text-content" style="color: white;">Stay connected :</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fa-brands fa-facebook-f" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="fa-brands fa-twitter" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fa-brands fa-instagram" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://in.pinterest.com/" target="_blank">
+                                    <i class="fa-brands fa-pinterest-p" style="color:white"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+
+    <!-- Tap to top start -->
+    <div class="theme-option">
+        <div class="back-to-top">
+            <a id="back-to-top" href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Tap to top end -->
+
+
+    <!-- Bg overlay Start -->
+    <div class="bg-overlay"></div>
+    <!-- Bg overlay End -->
+
+    <!-- latest jquery-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- jquery ui-->
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="assets/js/bootstrap/popper.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="assets/js/feather/feather.min.js"></script>
+    <script src="assets/js/feather/feather-icon.js"></script>
+
+    <!-- Lazyload Js -->
+    <script src="assets/js/lazysizes.min.js"></script>
+
+    <!-- Slick js-->
+    <script src="assets/js/slick/slick.js"></script>
+    <script src="assets/js/slick/custom_slick.js"></script>
+
+    <!-- script js -->
+    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function myFunction() {
+            var srchValue = document.getElementById("myText").value;
+           // alert(srchValue);
+            location.href = 'search.html?result='+ srchValue + '';
+        }
+    </script>
+</body>
+
+</html>

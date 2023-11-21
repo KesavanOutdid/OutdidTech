@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fastkart">
+    <meta name="keywords" content="Fastkart">
+    <meta name="author" content="Fastkart">
+    <link rel="icon" href="assets/images/icon/icon1.png" type="image/x-icon">
+    <title>Cart</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- feather icon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/slick/slick-theme.css">
+
+    <!-- Iconly css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bulk-style.css">
+
+    <!-- Template css -->
+    <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body style="background-color: aliceblue;">
+
+    <!-- Loader Start -->
+    <div class="fullpage-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Header Start -->
+    <header class="pb-md-4 pb-0">
+        <div class="top-nav top-header sticky-header">
+            <div class="container-fluid-lg">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbar-top">
+                            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                                <span class="navbar-toggler-icon">
+                                    <i class="fa-solid fa-bars"></i>
+                                </span>
+                            </button>
+                            <a href="index.html" class="web-logo nav-logo">
+                                <img src="assets/images/icon/icon.png" class="img-fluid blur-up lazyload" alt="" style="width:70%;">
+                            </a>
+
+                            <div class="middle-box">
+    
+                                <div class="search-box">
+                                    <div class="input-group">
+                                        <input type="text" id="myText" name="srchValue" value="" class="form-control" placeholder="I'm searching for..."
+                                            aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                        <button onclick="myFunction()" class="srchClick btn" type="button" id="button-addon2">
+                                            <i data-feather="search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightside-box">
+                                <div class="search-full">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i data-feather="search" class="font-light"></i>
+                                        </span>
+                                        <input type="text" id="srchFld" class="form-control search-type" placeholder="Search here..">
+                                        <span class="input-group-text close-search">
+                                            <i data-feather="x" class="font-light"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="right-side-menu">
+                                    <li class="right-side">
+                                        <div class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <div class="search-box">
+                                                    <i data-feather="search"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="right-side">
+                                        <a href="contact-us.html" class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <i data-feather="phone-call" style="color: #0c9077;"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="right-side" >
+                                        <div class="onhover-dropdown header-badge">
+                                            <a href="cart.html">
+                                                <button type="button" class="btn p-0 position-relative header-wishlist">
+                                                    <i data-feather="shopping-cart" style="color:#0da487;"></i>
+                                                    <span class="total-count position-absolute top-0 start-100 translate-middle badge">
+                                                    </span>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="right-side onhover-dropdown">
+                                        <div class="delivery-login-box">
+                                            <!-- User Email -->
+                                            <div class="onhover-dropdown header-badge">
+                                                <h5 id="useremail" style="color: #0da487;"></h5>
+                                            </div>
+                                            <div class="delivery-icon">
+                                                <i data-feather="user" style="color: #0c9077;"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="onhover-div onhover-div-login">
+                                            <ul class="user-box-name">
+                                                <li class="product-box-contain" id="hideShowID">
+                                                    <a href="login.html">Log In</a>
+                                                </li>
+
+                                                <li class="product-box-contain" id="myAccount">
+                                                    <a href="user-dashboard.html">My Account</a>
+                                                </li>
+
+                                                <li class="product-box-contain" id="myOrders">
+                                                    <a href="orders.html">My Orders</a>
+                                                </li>
+
+                                                <li class="product-box-contain">
+                                                    <a href="forgot.html">Forgot Password</a>
+                                                </li>
+
+                                                <li class="product-box-contain">
+                                                    <a onclick="deleteItems()">Log Out</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid-lg" style="background-image: url('assets/images/background/banner_07.png'); background-size: cover;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-nav">
+                        <div class="breadscrumb-contain" style="padding-bottom: 15px; padding-top: 15px;">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">
+                                            <i class="fa-solid fa-house" style="color: black;"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li class="breadcrumb-item active"><b>Contact Us</b></li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="header-nav-middle">
+                            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                                    <div class="offcanvas-header navbar-shadow">
+                                        <h5>Menu</h5>
+                                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link" href="index.html">Home</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Product</a>
+                                                <ul class="dropdown-menu" id="get-categorys">
+                                                    <!-- dropdown data -->
+                                                </ul>
+                                            </li>
+
+                                            <!-- <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Payment</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown dropdown-mega">
+                                                <a class="nav-link dropdown-toggle ps-xl-2 ps-0" href="javascript:void(0)" data-bs-toggle="dropdown">Shipping</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Wiki</a>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Seller</a>
+
+                                            </li>
+
+                                            <li class="nav-item dropdown new-nav-item">
+                                                <label class="new-dropdown">New</label>
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">Smt</a>
+
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- mobile fix menu start -->
+    <div class="mobile-menu d-md-none d-block mobile-cart" style="background-image: url('assets/images/background/banner_08.png'); background-size: cover;">
+        <ul>
+            <li class="active">
+                <a href="index.html">
+                    <i class="iconly-Home icli"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="search.html" class="search-box">
+                    <i class="iconly-Search icli"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    <i class="iconly-Bag-2 icli fly-cate"></i>
+                    <span>Cart</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- mobile fix menu end -->
+
+    <!-- Contact Box Section Start -->
+    <section class="contact-box-section">
+        <div class="container-fluid-lg">
+            <div class="row g-lg-5 g-3">
+                <div class="col-lg-6">
+                    <div class="left-sidebar-box">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="contact-image">
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="contact-title">
+                                    <h3>Get In Touch</h3>
+                                </div>
+
+                                <div class="contact-detail">
+                                    <div class="row g-4">
+                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box" style="background-color: #b7b7b74d;">
+                                                <div class="contact-icon">
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </div>
+                                                <div class="contact-detail-title">
+                                                    <h4>Phone</h4>
+                                                </div>
+
+                                                <div class="contact-detail-contain">
+                                                    <p>(+91) 80959 45298</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box" style="background-color: #b7b7b74d;">
+                                                <div class="contact-icon">
+                                                    <i class="fa-solid fa-envelope"></i>
+                                                </div>
+                                                <div class="contact-detail-title">
+                                                    <h4>Email</h4>
+                                                </div>
+
+                                                <div class="contact-detail-contain">
+                                                    <p>info@outdidunified.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box" style="background-color: #b7b7b74d;">
+                                                <div class="contact-icon">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                </div>
+                                                <div class="contact-detail-title">
+                                                    <h4>Office</h4>
+                                                </div>
+
+                                                <div class="contact-detail-contain">
+                                                    <p>No.57, 17th Cross, 7th Main road, <br>BTM 2nd Stage,
+                                                        Bangalore-560076.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="title d-xxl-none d-block">
+                        <h2>Contact Us</h2>
+                    </div>
+
+                    <form method="post" action="emailsend.php">
+                        <div class="right-sidebar-box" style="background-color: #b7b7b74d;">
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput" class="form-label">First Name</label>
+                                        <div class="custom-input">
+                                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter First Name" required>
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                                        <div class="custom-input">
+                                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter Last Name" required>
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput2" class="form-label">Email Address</label>
+                                        <div class="custom-input">
+                                            <input type="email" class="form-control" type="email" name="email"
+                                                id="email" placeholder="Enter Email Address" required>
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+                                        <div class="custom-input">
+                                            <input type="number" class="form-control" name="phone" id="phone"
+                                                placeholder="Enter Your Phone Number" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
+                                                this.value.slice(0, this.maxLength);" required>
+                                            <i class="fa-solid fa-mobile-screen-button"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput4" class="form-label">Subject</label>
+                                        <div class="custom-input">
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Enter Your Subject" required>
+                                            <i class="fa-solid fa-message"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlTextarea" class="form-label">Message</label>
+                                        <div class="custom-textarea">
+                                            <textarea class="form-control" name="message" id="message"
+                                                placeholder="Enter Your Message" rows="6" required></textarea>
+                                            <i class="fa-solid fa-message"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-animation btn-md fw-bold ms-auto" type="submit" name="send">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Box Section End -->
+
+    <!-- Map Section Start -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.968263452425!2d77.60387807514121!3d12.90976131623093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b6e7dc6213%3A0x310d1ebd5bba5299!2sOutdid%20Tech!5e0!3m2!1sen!2sin!4v1686893447207!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="section-t-space" style="background-image: url('assets/images/background/banner_08.png'); background-size: cover;">
+        <!-- <footer class="section-t-space" style="background-image: url('assets/images/background/footer.jpg');color: white;"> -->
+            <div class="container-fluid-lg">
+                <div class="main-footer section-b-space section-t-space">
+                    <div class="row g-md-4 g-3">
+                        <div class="col-xl-4 col-lg-4 col-sm-12" style="text-align: center;">
+                            <div class="footer-logo">
+    
+                                <div class="footer-logo-contain">
+                                    <div class="footer-title">
+                                        <h4 style="color: white;">Contact Details</h4>
+                                    </div>
+                                    <p style="padding-top:15px;color: white;">For registration questions please get in touch using the
+                                        contact details below. For any questions use the form.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-xl-4 col-lg-3 col-md-4 col-sm-12" style="text-align: center;">
+                            <div class="footer-title" style="padding-top: 20px;">
+                                <h4 style="color: white;">Address</h4>
+                            </div>
+    
+                            <div class="footer-contain">
+                                <a href="" class="text-content" style="color: white;">No.57, 17th Cross, 7th Main road, BTM 2nd Stage, Bangalore-560076</a>
+                            </div>
+                        </div>
+    
+                        <div class="col-xl-4 col-lg-4 col-sm-12" style="text-align: center;">
+                            <div class="footer-title" style="padding-top: 20px;">
+                                <h4 style="color: white;">Contact Us</h4>
+                            </div>
+                            <div class="footer-contain">
+                                <ul>
+                                    <li>
+                                        <a href="contact-us.html" class="text-content" style="color: white;">info@outdidunified.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="sub-footer section-small-space">
+                    <div class="reserve">
+                        <h6 class="text-content" style="color: white;">©2023 Outdid Electronics</h6>
+                    </div>
+    
+                    <div class="social-link">
+                        <h6 class="text-content" style="color: white;">Stay connected :</h6>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fa-brands fa-facebook-f" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="fa-brands fa-twitter" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fa-brands fa-instagram" style="color:white"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://in.pinterest.com/" target="_blank">
+                                    <i class="fa-brands fa-pinterest-p" style="color:white"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+
+    <!-- Tap to top start -->
+    <div class="theme-option">
+        <div class="back-to-top">
+            <a id="back-to-top" href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Tap to top end -->
+
+    <!-- Bg overlay Start -->
+    <div class="bg-overlay"></div>
+    <!-- Bg overlay End -->
+
+    <!-- latest jquery-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- jquery ui-->
+    <script src="assets/js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap/popper.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap-notify.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="assets/js/feather/feather.min.js"></script>
+    <script src="assets/js/feather/feather-icon.js"></script>
+
+    <!-- Lazyload Js -->
+    <script src="assets/js/lazysizes.min.js"></script>
+
+    <!-- Wizard js -->
+    <script src="assets/js/wizard.js"></script>
+
+    <!-- Slick js-->
+    <script src="assets/js/slick/slick.js"></script>
+    <script src="assets/js/slick/custom_slick.js"></script>
+
+    <!-- script js -->
+    <script src="assets/js/script.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+<script>
+     function myFunction() {
+        var srchValue = document.getElementById("myText").value;
+      //  alert(srchValue);
+        location.href = 'search.html?result='+ srchValue + '';
+       // document.getElementById("demo").innerHTML = x;
+    }
+</script>
+
+</html>
