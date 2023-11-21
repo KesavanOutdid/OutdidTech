@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- meta data -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="assets/images/icon/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/icon/icon.png" type="image/x-icon">
+    <title>Outdidtech - Add New Product</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Linear Icon css -->
+    <link rel="stylesheet" href="assets/css/linearicon.css">
+
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- Themify icon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
+
+    <!--Dropzon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/dropzone.css">
+
+    <!-- Feather icon css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/remixicon.css">
+
+    <!-- Select2 css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/chartist.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/date-picker.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+    <!-- Bootstrap-tag input css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-tagsinput.css">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- tap on top start -->
+    <div class="tap-top">
+        <span class="lnr lnr-chevron-up"></span>
+    </div>
+    <!-- tap on tap end -->
+
+    <!-- page-wrapper start -->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <div class="page-header">
+            <div class="header-wrapper m-0">
+                <div class="header-logo-wrapper p-0">
+                    <div class="logo-wrapper">
+                        <a href="main-index.html">
+                            <!-- <img class="img-fluid main-logo" src="assets/images/logo/1.png" alt="logo">
+                            <img class="img-fluid white-logo" src="assets/images/logo/1-white.png" alt="logo"> -->
+                        </a>
+                    </div>
+                    <div class="toggle-sidebar">
+                        <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+                        <a href="main-index.html">
+                            <!-- <img src="assets/images/logo/1.png" class="img-fluid" alt=""> -->
+                            <h2 style="color:rgb(3, 3, 3);">Outdidtech</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <form class="form-inline search-full" action="javascript:void(0)" method="get">
+                    <div class="form-group w-100">
+                        <div class="Typeahead Typeahead--twitterUsers">
+                            <div class="u-posRelative">
+                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                                    placeholder="Search Fastkart .." name="q" title="" autofocus>
+                                <i class="close-search" data-feather="x"></i>
+                                <div class="spinner-border Typeahead-spinner" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="Typeahead-menu"></div>
+                        </div>
+                    </div>
+                </form> -->
+                <div class="nav-right col-6 pull-right right-header p-0">
+                    <ul class="nav-menus">
+                        <li>
+                            <span class="header-search">
+                                <i class="ri-search-line"></i>
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="mode" style="padding-right:950px;">
+                                <!-- <i class="ri-moon-line"></i> -->
+                                <h3 id="useremail" style="color:#0da487;"></h3>
+                            </div>
+                        </li>
+                        <li class="profile-nav onhover-dropdown pe-0 me-0">
+                            <div class="media profile-media" id="admin-profile">
+                                <!-- <img class="user-profile rounded-circle" src="assets/images/user/user2.png" alt=""> -->
+                                
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li>
+                                    <a href="all-users.html">
+                                        <i data-feather="users"></i>
+                                        <span>Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="order-list.html">
+                                        <i data-feather="archive"></i>
+                                        <span>Orders</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile-setting.html">
+                                        <i data-feather="settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="deleteItems()">
+                                        <i data-feather="log-out"></i>
+                                        <span>Log out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Ends-->
+
+        <!-- Page Body start -->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+            <div class="sidebar-wrapper">
+                <div id="sidebarEffect"></div>
+                <div>
+                    <div class="logo-wrapper logo-wrapper-center">
+                        <a href="main-index.html" data-bs-original-title="" title="">
+                            <h2 style="color: white;">Oudidtech</h2>
+                        </a>
+                        <div class="back-btn">
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="toggle-sidebar">
+                            <i class="ri-apps-line status_toggle middle sidebar-toggle"></i>
+                        </div>
+                    </div>
+                    <div class="logo-icon-wrapper">
+                        <a href="main-index.html">
+                        </a>
+                    </div>
+                    <nav class="sidebar-main">
+                        <div class="left-arrow" id="left-arrow">
+                            <i data-feather="arrow-left"></i>
+                        </div>
+
+                        <div id="sidebar-menu">
+                            <ul class="sidebar-links" id="simple-bar">
+                                <li class="back-btn"></li>
+
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="main-index.html">
+                                        <i class="ri-home-line"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-store-3-line"></i>
+                                        <span>Product</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="products.html">Prodcts</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="add-new-product.html">Add New Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-list-check-2"></i>
+                                        <span>Category</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="category.html">Category List</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="add-new-category.html">Add New Category</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                        <span>Users</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="all-users.html">All users</a>
+                                        </li>
+                                        <li>
+                                            <a href="add-new-user.html">Add new user</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-archive-line"></i>
+                                        <span>Orders</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="order-list.html">Order List</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-settings-line"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="profile-setting.html">Profile Setting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="right-arrow" id="right-arrow">
+                            <i data-feather="arrow-right"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+
+            <div class="page-body">
+
+                <!-- New Product Add Start -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <form action="save-new-product.php" class="theme-form theme-form-2 mega-form form" id="form" enctype="multipart/form-data" method="POST">
+                                    <div class="col-sm-8 m-auto">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="card-header-2">
+                                                    <h5>Product Information</h5>
+                                                </div>
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="col-sm-3 col-form-label form-label-title">Main Category</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="js-example-basic-single w-100" id="select_main" name="main_categorys">
+                                                                <option selected value="" disabled>Main Category Menu</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label
+                                                            class="col-sm-3 col-form-label form-label-title">Subcategory</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="js-example-basic-single w-100" id="select_sub" name="sub_categorys">
+                                                                <option selected value="" disabled>Subcategory Menu</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Product Name</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="name" placeholder="Product Name" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Product Price</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="price" placeholder="Product Price" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Product Quantity</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="product_qty" placeholder="Product Quantity" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Part Number</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="part_number" placeholder="Part Number" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">SKU</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="sku" placeholder="SKU" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="card-header-2">
+                                                    <h5>Product Images</h5>
+                                                </div>
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="col-sm-3 col-form-label form-label-title">Images</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="file" name="image" id="image-file1" accept=".jpg, .jpeg, .png" class="form-control form-choose"  multiple>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="col-sm-3 col-form-label form-label-title">Thumbnail Img-1</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="file" name="img_2" id="image-file2" accept=".jpg, .jpeg, .png" class="form-control form-choose" multiple>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="col-sm-3 col-form-label form-label-title">Thumbnail Img-2</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="file" name="img_3" id="image-file3" accept=".jpg, .jpeg, .png" class="form-control form-choose" multiple>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="col-sm-3 col-form-label form-label-title">Thumbnail Img-3</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="file" name="img_4" id="image-file4" accept=".jpg, .jpeg, .png" class="form-control form-choose" multiple>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="card-header-2">
+                                                    <h5>Description</h5>
+                                                </div>
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Heading One</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="des_heading_1" placeholder="Fresh Fruits" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Paragraph One</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" rows="3" name="des_paragraph_1" autocomplete="off" required></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Heading Two</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="des_heading_2" placeholder="Fresh Fruits" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Paragraph Two</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" rows="3" name="des_paragraph_2" autocomplete="off" required></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Examples</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="file" name="user_link" accept=".pdf" placeholder="Examples" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row align-items-center">
+                                                        <label class="form-label-title col-sm-3 mb-0">Package</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="package" placeholder="Fresh Fruits" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Specialty</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" rows="3" name="specialty" autocomplete="off" required></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Weight</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="weight" placeholder="Weight" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Brand</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="brand" placeholder="Brand" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 row">
+                                                        <label class="form-label-title col-sm-3 mb-0">Manufacturer</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="search" name="manufacturer" placeholder="Manufacturer" autocomplete="off" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="padding-left:75%;">
+                                                        <button type="submit" name="add-product" class="btn btn-md bg-dark cart-button text-white w-100">Submit</button>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Product Add End -->
+
+                <!-- footer Start -->
+                <div class="container-fluid">
+                    <footer class="footer">
+                        <div class="row">
+                            <div class="col-md-12 footer-copyright text-center">
+                                <p class="mb-0">Copyright 2023 © Outdid Electronics</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- footer En -->
+            </div>
+            <!-- Container-fluid End -->
+        </div>
+        <!-- Page Body End -->
+    </div>
+    <!-- page-wrapper End -->
+
+    <!-- latest js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- feather icon js -->
+    <script src="assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
+
+    <!-- scrollbar simplebar js -->
+    <script src="assets/js/scrollbar/simplebar.js"></script>
+    <script src="assets/js/scrollbar/custom.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- bootstrap tag-input js -->
+    <script src="assets/js/bootstrap-tagsinput.min.js"></script>
+    <script src="assets/js/sidebar-menu.js"></script>
+
+    <!-- customizer js -->
+    <script src="assets/js/customizer.js"></script>
+
+    <!--Dropzon js -->
+    <script src="assets/js/dropzone/dropzone.js"></script>
+    <script src="assets/js/dropzone/dropzone-script.js"></script>
+
+    <!-- Plugins js -->
+    <!-- <script src="assets/js/notify/bootstrap-notify.min.js"></script> -->
+    <!-- <script src="assets/js/notify/index.js"></script> -->
+
+    <!-- ck editor js -->
+    <script src="assets/js/ckeditor.js"></script>
+    <!-- <script src="assets/js/ckeditor-custom.js"></script> -->
+
+    <!-- select2 js -->
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/select2-custom.js"></script>
+
+    <!-- sidebar effect -->
+    <script src="assets/js/sidebareffect.js"></script>
+
+    <!-- Theme js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Admin Script js-->
+    <script src="adminScript.js"></script>
+
+    <!-- Upload file size js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</body>
+
+<script>
+    // Get main title
+     $.ajax({
+            type: "POST",
+            url: "get_main_title.php",
+            success: function(response) {
+
+                val = $.parseJSON(response);
+
+                var len = val.length;
+
+                for (var i = 0; i < len; i++) {
+                    $("#select_main").append('<option value="' + val[i]['main_title'] + '">' + val[i]['main_title'] + '</option>')
+                }
+            },
+            error: function(response) {
+                alert(response);
+            }
+        });
+
+        // Get sub title
+        $("#select_main").change(function() {
+
+            var val = $(this).val();
+
+            $.ajax({
+                type: "POST",
+                url: "get_sub_title.php",
+                data: {
+                    sub: val
+                },
+                success: function(response) {
+
+                    $('#select_sub').empty();
+
+                    val = $.parseJSON(response);
+
+                    var len = val.length;
+
+                    $('#select_sub').append('<option selected value="" disabled>Select the option</option>');
+
+                    for (var i = 0; i < len; i++) {
+                        $("#select_sub").append('<option value="' + val[i]['sub_title'] + '">' + val[i]['sub_title'] + '</option>')
+                    }
+                },
+                error: function(response) {
+                    alert(response);
+                }
+            });
+        });
+
+        // upload image size
+        $('#image-file1').on('change', function() {
+            var numb = $(this)[0].files[0].size / 500 / 500;
+            numb = numb.toFixed(2);
+            if (numb > 2) {
+                alert('to big, maximum is 500KB. You file size is: ' + numb + ' MiB');
+            } else {
+                alert('it okey, your file has ' + numb + 'KB')
+            }
+        });
+
+        $('#image-file2').on('change', function() {
+            var numb = $(this)[0].files[0].size / 500 / 500;
+            numb = numb.toFixed(2);
+            if (numb > 2) {
+                alert('to big, maximum is 500KB. You file size is: ' + numb + ' MiB');
+            } else {
+                alert('it okey, your file has ' + numb + 'KB')
+            }
+        });
+
+        $('#image-file3').on('change', function() {
+            var numb = $(this)[0].files[0].size / 500 / 500;
+            numb = numb.toFixed(2);
+            if (numb > 2) {
+                alert('to big, maximum is 500KB. You file size is: ' + numb + ' MiB');
+            } else {
+                alert('it okey, your file has ' + numb + 'KB')
+            }
+        });
+
+        $('#image-file4').on('change', function() {
+            var numb = $(this)[0].files[0].size / 500 / 500;
+            numb = numb.toFixed(2);
+            if (numb > 2) {
+                alert('to big, maximum is 500KB. You file size is: ' + numb + ' MiB');
+            } else {
+                alert('it okey, your file has ' + numb + 'KB')
+            }
+        });
+</script>
+
+</html>

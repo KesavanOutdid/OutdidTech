@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="assets/images/icon/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/icon/icon.png" type="image/x-icon">
+    <title>Outdidtech - Order List</title>
+
+    <!-- Google font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- Linear Icon -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- Themify icon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
+
+    <!-- Feather icon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/remixicon.css">
+
+    <!-- Data Table css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/datatables.css">
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- tap on top start-->
+    <div class="tap-top">
+        <span class="lnr lnr-chevron-up"></span>
+    </div>
+    <!-- tap on tap end-->
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+        <!-- Page Header Start-->
+        <div class="page-header">
+            <div class="header-wrapper m-0">
+                <div class="header-logo-wrapper p-0">
+                    <div class="logo-wrapper">
+                        <a href="main-index.html">
+                        </a>
+                    </div>
+                    <div class="toggle-sidebar">
+                        <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+                        <a href="main-index.html">
+                            <h2 style="color:rgb(3, 3, 3);">Outdidtech</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-right col-6 pull-right right-header p-0">
+                    <ul class="nav-menus">
+                        <li>
+                            <span class="header-search">
+                                <i class="ri-search-line"></i>
+                            </span>
+                        </li>
+
+                        <li>
+                            <div class="mode" style="padding-right:950px;">
+                                <h3 id="useremail" style="color:#0da487;"></h3>
+                            </div>
+                        </li>
+                        <li class="profile-nav onhover-dropdown pe-0 me-0">
+                            <div class="media profile-media" id="admin-profile">
+                                
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li>
+                                    <a href="all-users.html">
+                                        <i data-feather="users"></i>
+                                        <span>Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="order-list.html">
+                                        <i data-feather="archive"></i>
+                                        <span>Orders</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile-setting.html">
+                                        <i data-feather="settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onclick="deleteItems()">
+                                        <i data-feather="log-out"></i>
+                                        <span>Log out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header Ends-->
+
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+            <div class="sidebar-wrapper">
+                <div id="sidebarEffect"></div>
+                <div>
+                    <div class="logo-wrapper logo-wrapper-center">
+                        <a href="main-index.html" data-bs-original-title="" title="">
+                            <h2 style="color: white;">Oudidtech</h2>
+                        </a>
+                        <div class="back-btn">
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="toggle-sidebar">
+                            <i class="ri-apps-line status_toggle middle sidebar-toggle"></i>
+                        </div>
+                    </div>
+                    <div class="logo-icon-wrapper">
+                        <a href="main-index.html">
+                        </a>
+                    </div>
+                    <nav class="sidebar-main">
+                        <div class="left-arrow" id="left-arrow">
+                            <i data-feather="arrow-left"></i>
+                        </div>
+
+                        <div id="sidebar-menu">
+                            <ul class="sidebar-links" id="simple-bar">
+                                <li class="back-btn"></li>
+
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="main-index.html">
+                                        <i class="ri-home-line"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-store-3-line"></i>
+                                        <span>Product</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="products.html">Prodcts</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="add-new-product.html">Add New Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-list-check-2"></i>
+                                        <span>Category</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="category.html">Category List</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="add-new-category.html">Add New Category</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-user-3-line"></i>
+                                        <span>Users</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="all-users.html">All users</a>
+                                        </li>
+                                        <li>
+                                            <a href="add-new-user.html">Add new user</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-archive-line"></i>
+                                        <span>Orders</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="order-list.html">Order List</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-settings-line"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="profile-setting.html">Profile Setting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="right-arrow" id="right-arrow">
+                            <i data-feather="arrow-right"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+
+            <!-- Order section Start -->
+            <div class="page-body">
+                <!-- Table Start -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card card-table">
+                                <div class="card-body">
+                                    <div class="title-header option-title">
+                                        <h5>Order List</h5>
+                                        <!-- <a href="#" class="btn btn-solid">Download all orders</a> -->
+                                    </div>
+                                    <div>
+                                        <div class="table-responsive">
+                                            <table class="table all-package order-table theme-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Phone</th>
+                                                        <th>Email</th>
+                                                        <th>Address</th>
+                                                        <th>Pin Code</th>
+                                                        <!-- <th>Delivery Option</th> -->
+                                                        <th>Payment Method</th>
+                                                        <th>Product Image</th>
+                                                        <th>Product Name</th>
+                                                        <th>Amount</th>
+                                                        <th>Quantity</th>
+                                                        <th>Total Amount</th>
+                                                        <th>Option</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody class="delivery-order">
+                                                    <!-- Data -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table End -->
+
+                <!-- footer start-->
+                <div class="container-fluid">
+                    <footer class="footer">
+                        <div class="row">
+                            <div class="col-md-12 footer-copyright text-center">
+                                <p class="mb-0">Copyright 2023 © Outdid Electronics</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <!-- Order section End -->
+        </div>
+        <!-- Page Body End-->
+    </div>
+    <!-- page-wrapper End -->
+
+    <!-- Product update start-->
+    <div class="modal fade theme-modal remove-coupon show" id="exampleModalToggle-new" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" style="padding-right:40px ; padding-top: 10px;">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row" id="tracking-edit_modal">
+                            <!-- tracking data -->
+                            <!-- <form action="save-trackingUpdate.php" class="theme-form theme-form-2 mega-form" method="POST" style="padding-left:50px;">
+                                <div class="modal-header d-block">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                                </button>
+                                </div>
+                                <div class="card-header-1">
+                                <h5 style=" padding-bottom:10px""><b>Tracking Information</b></h5>
+                                </div>
+                                <div class="row">
+                                <div class="mb-4 row align-items-center">
+                                <label class="form-label-title col-lg-2 col-md-3 mb-0" style="width:100%">Confirmed</label>
+                                <div class="col-md-9 col-lg-10">
+                                <input class="form-control" type="text" value="" name="confirmed" autocomplete="off" placeholder="Confirmed" required>
+                                </div>
+                                </div>
+                                <div class="mb-4 row align-items-center">
+                                <label class="col-lg-2 col-md-3 col-form-label form-label-title" style="width:100%">Packed</label>
+                                <div class="col-md-9 col-lg-10">
+                                <input class="form-control" type="email"value="" name="packed" autocomplete="off" placeholder="Packed" required>
+                                </div>
+                                </div>
+                                <div class="mb-4 row align-items-center">
+                                <label class="col-lg-2 col-md-3 col-form-label form-label-title" style="width:100%">Shipped</label>
+                                <div class="col-md-9 col-lg-10">
+                                <input class="form-control" type="text" value="" name="shipped" autocomplete="off" placeholder="Shipped" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                                </div>
+                                </div>
+                                <div class="mb-4 row align-items-center">
+                                <label class="col-lg-2 col-md-3 col-form-label form-label-title" style="width:100%">Arriving</label>
+                                <div class="col-md-9 col-lg-10">
+                                <input class="form-control" value="" type="text" name="arriving" autocomplete="off" placeholder="Arriving" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at (A-Z/!@#&*/a-z/1-10), and at least 8 or more characters" required>
+                                </div>
+                                </div>
+                                <div style="padding-left:50%;padding-bottom:10px; padding-right:50px;">
+                                <button type="submit" name="tracking-update" class="btn btn-md bg-dark cart-button text-white w-100">Submit</button>
+                                </div>
+                                </div>
+                                </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product update end-->
+
+
+    <!-- Offcanvas Box Start -->
+    <div class="offcanvas offcanvas-end order-offcanvas" tabindex="-1" id="order-details"
+        aria-labelledby="offcanvasExampleLabel" aria-expanded="false">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title" id="offcanvasExampleLabel">#573-685572</h4>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="order-date">
+                <h6>September 17, 2022 <span class="ms-3">8:12 PM</span></h6>
+                <a href="javascript:void(0)" class="d-block mt-1">Cancel Order</a>
+            </div>
+
+            <div class="accordion accordion-flush custome-accordion" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Status
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="status-list">
+                                <li>
+                                    <a href="javascript:void(0)">Shipped</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Pending</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                            body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offcanvas Box End -->
+
+    <!-- latest js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- feather icon js -->
+    <script src="assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
+
+    <!-- customizer js -->
+    <script src="assets/js/customizer.js"></script>
+
+    <!-- scrollbar simplebar js -->
+    <script src="assets/js/scrollbar/simplebar.js"></script>
+    <script src="assets/js/scrollbar/custom.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- Plugins js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <!-- <script src="assets/js/notify/bootstrap-notify.min.js"></script> -->
+    <!-- <script src="assets/js/notify/index.js"></script> -->
+
+    <!-- Data table js -->
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <script src="assets/js/custom-data-table.js"></script>
+
+    <!-- all checkbox select js -->
+    <script src="assets/js/checkbox-all-check.js"></script>
+
+    <!-- sidebar effect -->
+    <script src="assets/js/sidebareffect.js"></script>
+
+    <!-- Theme js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Admin js -->
+    <script src="adminScript.js"></script>
+</body>
+
+</html>
